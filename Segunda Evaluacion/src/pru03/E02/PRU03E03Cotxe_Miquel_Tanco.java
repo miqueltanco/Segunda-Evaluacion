@@ -2,25 +2,30 @@ package pru03.E02;
 
 public class PRU03E03Cotxe_Miquel_Tanco extends CotxeAbstracte implements InterfaceCotxe {
 	
-	//CONSTRUCTOR
 	public PRU03E03Cotxe_Miquel_Tanco(String marca, String model, TipusCanvi tipuscanvi) {
 		super(marca, model, tipuscanvi);
 	}
-	
-	//INSTANCIAR ESTATMOTOR
+
+	//INSTANCIAR ESTATMOTORCOTXE
 	EstatsMotorCotxe estadoMotor = EstatsMotorCotxe.Aturat;
 	
-	@Override
+	@Override //METODO ARRANCA COCHE
 	public void arrancarMotor() throws Exception {
-		
+		if (estadoMotor.equals(EstatsMotorCotxe.Aturat)) {
+			estadoMotor = EstatsMotorCotxe.EnMarxa;
+		}
+		else throw new Exception ("El coche esta arrancado.");
 	}
 
-	@Override
+	@Override //METODO COMPROBAR SI EL MOTOR ESTA ARRANCADO O NO
 	public EstatsMotorCotxe comprovaMotor() {
-		return null;
+		if (estadoMotor.equals(EstatsMotorCotxe.EnMarxa)) {
+			return EstatsMotorCotxe.EnMarxa;
+		}
+		else return EstatsMotorCotxe.Aturat;
 	}
 
-	@Override
+	@Override //METODO CALCULAR REVOLUCIONES ALEATORIAS ENTRE 1 Y 6500
 	public int getRevolucions() {
 		if (estadoMotor.equals(EstatsMotorCotxe.EnMarxa)) {
 		double rev;
@@ -31,18 +36,12 @@ public class PRU03E03Cotxe_Miquel_Tanco extends CotxeAbstracte implements Interf
 		else return 0;
 	}
 
-	@Override
+	@Override //METODO APAGAR COCHE
 	public void aturarMotor() throws Exception {
+		if (estadoMotor.equals(EstatsMotorCotxe.EnMarxa)) {
+			estadoMotor = EstatsMotorCotxe.Aturat;
+		}
+		else throw new Exception ("El coche ya esta apagado.");
 
 	}
-
-	public static void main(String[] args) {
-		
-		PRU03E03Cotxe_Miquel_Tanco Coche;
-		Coche = new PRU03E03Cotxe_Miquel_Tanco("Nissan","S14", TipusCanvi.CanviManual);
-		
-		System.out.println(Coche.getRevolucions());
-		
-	}
-
 }
