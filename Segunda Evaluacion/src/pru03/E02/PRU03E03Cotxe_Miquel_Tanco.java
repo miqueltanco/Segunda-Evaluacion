@@ -14,7 +14,7 @@ public class PRU03E03Cotxe_Miquel_Tanco extends CotxeAbstracte implements Interf
 		if (estadoMotor.equals(EstatsMotorCotxe.Aturat)) {
 			estadoMotor = EstatsMotorCotxe.EnMarxa;
 		}
-		else throw new Exception ("El coche esta arrancado.");
+		else throw new Exception ("El coche ya esta arrancado.");
 	}
 
 	@Override //METODO COMPROBAR SI EL MOTOR ESTA ARRANCADO O NO
