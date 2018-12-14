@@ -1,11 +1,6 @@
 package pru03.E02;
 
-public class PRU03E02TestCotxe_Miquel_Tanco extends PRU03E03Cotxe_Miquel_Tanco implements InterfaceCotxe {
-
-	public PRU03E02TestCotxe_Miquel_Tanco(String marca, String model, TipusCanvi tipuscanvi) {
-		super(marca, model, tipuscanvi);
-	}
-
+public class PRU03E02TestCotxe_Miquel_Tanco {
 	public static void main(String[] args) throws Exception{
 
 		PRU03E03Cotxe_Miquel_Tanco Coche;

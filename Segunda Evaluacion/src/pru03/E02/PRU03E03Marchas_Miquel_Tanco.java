@@ -5,15 +5,21 @@ public class PRU03E03Marchas_Miquel_Tanco extends PRU03E03Cotxe_Miquel_Tanco {
 	//CONSTRUCTOR
 	public PRU03E03Marchas_Miquel_Tanco(String marca, String model, TipusCanvi tipuscanvi) {
 		super(marca, model, tipuscanvi);
+		if (tipuscanvi.equals(tipuscanvi.CanviManual)) {
+			CambioM = CambioManual.Neutral;
+		}
+		if (tipuscanvi.equals(tipuscanvi.CanviAutomatic)) {
+			CambioA = CambioAutomatico.Parking;
+		}
 	}
 	
-	//LO HE USADO ASI PARA TENER UN NOMBRE DIFERENTE, QUE SEA MAS CLARO
-	static TipusCanvi CambioCocheManual = TipusCanvi.CanviManual;
-	static TipusCanvi CambioCocheAuto = TipusCanvi.CanviAutomatic;
+	CambioManual CambioM = null;
+	CambioAutomatico CambioA = null;
 	
 	//ENUMERACION DE LAS POSIBLES MARCHAS QUE TIENE UN CAMBIO MANUAL
 	public enum CambioManual {
 		MarchaAtras,
+		Neutral,
 		PrimeraMarcha,
 		SegundaMarcha,
 		TerceraMarcha,
@@ -30,23 +36,17 @@ public class PRU03E03Marchas_Miquel_Tanco extends PRU03E03Cotxe_Miquel_Tanco {
 	}
 	
 	//METODO DE CAMBIO DE MARCHA EN MANUAL
-	public CambioManual CanviarMarxaManual(String Orden) {
-		return null;
-	}
+	public void CanviarMarxaManual(String Orden) throws Exception {
+		if (Orden=="Primera") {
+			if (CambioM.equals(CambioM.Neutral)) {
+			 CambioM = CambioM.PrimeraMarcha;
+		}
+			else throw new Exception("No puedes saltar marchas");
+	}	
+}
+	
 	//METODO CAMBIO DE MARCHA EN AUTOMATICO
 	public CambioAutomatico CanviarMarxaAuto(String Orden) {
 		return null;
 	} 
-	
-	
-	public static void main(String[] args) {
-
-		PRU03E03Marchas_Miquel_Tanco Coche1;
-		Coche1 = new PRU03E03Marchas_Miquel_Tanco("Nissan","Silvia S14 motor swap RB26DETT",CambioCocheManual);
-		PRU03E03Marchas_Miquel_Tanco Coche2;
-		Coche2 = new PRU03E03Marchas_Miquel_Tanco("Audi","A3",CambioCocheAuto);
-		
-		
-	}
-
 }
