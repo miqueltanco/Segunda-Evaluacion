@@ -40,7 +40,7 @@ public class PRU03E04Temps_Miquel_Tanco {
 	}
 	
 	//METODO RESTAR TIEMPO
-	public void RestaTemps(int h, int m, int s) {
+	public void RestaTemps(int h, int m, int s) throws Exception {
 		
 		int horasuma = h*3600;
 		int minsuma = m*60;
@@ -51,6 +51,10 @@ public class PRU03E04Temps_Miquel_Tanco {
 		int totaltiempo = convermin+converhora+segundo;
 		
 		int segundostotales = totaltiempo-totaltiemposuma;
+		
+		if (segundostotales<0) {
+			throw new Exception ("No puedes restar más tiempo");
+			}
 		
 		hora = segundostotales/3600;
 		minuto =  (segundostotales % 3600)/60;
