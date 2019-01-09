@@ -1,10 +1,10 @@
 package EjerciciosClase;
 
-public class convertir {
+public class Conversion {
 	
 	//METODO QUE CONVIERTE LOS NUMEROS(String) A NUMEROS(int)   ******** (LAS POSICIONES EN ASCII SON DEL 48 AL 57) 
 	
-	public int conversion(char numero) {
+	public int convertir(char numero) {
 		
 			switch (numero) {
 				case 48:

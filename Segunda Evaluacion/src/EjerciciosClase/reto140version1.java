@@ -5,8 +5,8 @@ public class reto140version1 {
 
 	public static void main(String[] args) {
 		
-		convertir Conver;
-		Conver = new convertir();
+		Conversion conversion;
+		conversion = new Conversion();
 		
 		Scanner sc = new Scanner(System.in);
 		String numero=sc.nextLine();
@@ -16,9 +16,9 @@ public class reto140version1 {
 		
 		for(int i=0; numero.length() > i; i++){
 			
-			Conver.conversion(numero.charAt(i));
+			conversion.convertir(numero.charAt(i));
 			
-			suma+=Conver.conversion(numero.charAt(i));
+			suma+=conversion.convertir(numero.charAt(i));
 			
 			if(i<(numero.length()-1)) {
 			System.out.print(numero.charAt(i) + " + ");
