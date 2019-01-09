@@ -2,6 +2,8 @@ package EjerciciosClase;
 
 public class convertir {
 	
+	//METODO QUE CONVIERTE LOS NUMEROS(String) A NUMEROS(int)   ******** (LAS POSICIONES EN ASCII SON DEL 48 AL 57) 
+	
 	public int conversion(char numero) {
 		
 			switch (numero) {
