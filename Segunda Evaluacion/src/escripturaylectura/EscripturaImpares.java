@@ -5,9 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 
-public class EscripturaPrimos {
+public class EscripturaImpares {
 	
-	public static final String FICHERO_PRIMOS="C:\\temp\\primos.dat";
+	public static final String FICHERO_IMPARES="C:\\temp\\impares.dat";
 	
 	public static void main (String[]args) {
 		
@@ -16,7 +16,7 @@ public class EscripturaPrimos {
 		
 		try {
 		
-		BufferedWriter bw = new BufferedWriter(new FileWriter(FICHERO_PRIMOS));
+		BufferedWriter bw = new BufferedWriter(new FileWriter(FICHERO_IMPARES));
 		
 		for(int i=1; i<500; i+=2) {
 			linia=(Integer.toString(i) + sl);

@@ -10,7 +10,7 @@ import java.io.IOException;
 public class LecturaArchivos {
 
 	public static final String FICHERO_PARES="C:\\temp\\pares.dat";
-	public static final String FICHERO_PRIMOS="C:\\temp\\primos.dat";
+	public static final String FICHERO_IMPARES="C:\\temp\\impares.dat";
 	public static final String FICHERO_JUNTOS="C:\\temp\\juntos.dat";
 
 	public static void main(String[]args) {
@@ -23,7 +23,7 @@ public class LecturaArchivos {
 
 			BufferedWriter bw = new BufferedWriter(new FileWriter(FICHERO_JUNTOS));
 			BufferedReader brpares = new BufferedReader(new FileReader(FICHERO_PARES));
-			BufferedReader brprimos = new BufferedReader(new FileReader(FICHERO_PRIMOS));
+			BufferedReader brprimos = new BufferedReader(new FileReader(FICHERO_IMPARES));
 
 			if(linia1!=null||linia2!=null) {
 				for(int i=0;i<=500;i=i+2) {

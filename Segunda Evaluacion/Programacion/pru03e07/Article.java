@@ -1,48 +1,49 @@
 package pru03e07;
 
 public class Article {
+
 	String codi = "LLIURE";
 	String descripcio;
 	double preuDeCompra;
 	double preuDeVenda;
 	int stock;
-	
+
 	public String getCodi() {
 		return codi;
 	}
-	
+
 	public void setCodi(String codi) {
 		this.codi = codi;
 	}
-	
+
 	public String getDescripcio() {
 		return descripcio;
 	}
-	
+
 	public void setDescripcio(String descripcio) {
 		this.descripcio = descripcio;
 	}
-	
+
 	public double getPreuDeCompra() {
 		return preuDeCompra;
 	}
-	
+
 	public void setPreuDeCompra(double preuDeCompra) {
 		this.preuDeCompra = preuDeCompra;
 	}
-	
+
 	public double getPreuDeVenda() {
 		return preuDeVenda;
 	}
-	
+
 	public void setPreuDeVenda(double preuDeVenda) {
 		this.preuDeVenda = preuDeVenda;
 	}
-	
+
 	public int getStock() {
 		return stock;
 	}
-	
+
 	public void setStock(int stock) {
 		this.stock = stock;
 	}

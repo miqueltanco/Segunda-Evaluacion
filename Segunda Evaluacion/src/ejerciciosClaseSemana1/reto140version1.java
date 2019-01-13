@@ -1,4 +1,4 @@
-package EjerciciosClase;
+package ejerciciosClaseSemana1;
 import java.util.Scanner;
 
 public class reto140version1 {

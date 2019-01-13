@@ -1,4 +1,4 @@
-package EjerciciosClase;
+package ejerciciosClaseSemana1;
 
 public class Conversion {
 	
