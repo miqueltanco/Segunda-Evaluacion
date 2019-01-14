@@ -9,9 +9,9 @@ import java.io.IOException;
 
 public class LecturaArchivos {
 
-	public static final String FICHERO_PARES="C:\\temp\\pares.dat";
-	public static final String FICHERO_IMPARES="C:\\temp\\impares.dat";
-	public static final String FICHERO_JUNTOS="C:\\temp\\juntos.dat";
+	public static final String FICHERO_PARES="C:\\Temp\\pares.dat";
+	public static final String FICHERO_IMPARES="C:\\Temp\\impares.dat";
+	public static final String FICHERO_JUNTOS="C:\\Temp\\juntos.dat";
 
 	public static void main(String[]args) {
 
@@ -29,12 +29,12 @@ public class LecturaArchivos {
 				for(int i=0;i<=500;i=i+2) {
 					linia1=brpares.readLine();
 					linia2=brprimos.readLine();
-					System.out.println(linia1);
-					if(i!=500) 
-						System.out.println(linia2);
 					bw.write(linia1+sl);
 					if(i!=500) 
 						bw.write(linia2+sl);
+					System.out.println(linia1);
+					if(i!=500)
+					System.out.println(linia2);
 				}
 			}
 
