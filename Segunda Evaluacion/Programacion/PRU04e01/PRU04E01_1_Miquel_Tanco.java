@@ -1,4 +1,4 @@
-//package PRU04e01;
+package PRU04e01;
 
 import java.util.Scanner;
 
