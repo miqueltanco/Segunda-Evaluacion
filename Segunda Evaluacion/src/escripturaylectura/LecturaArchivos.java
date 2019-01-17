@@ -27,16 +27,16 @@ public class LecturaArchivos {
 
 			linia1=brpares.readLine();
 			linia2=brprimos.readLine();
-			
+
 			while(linia1!=null||linia2!=null) {
-					bw.write(linia1+sl);
-					System.out.println(linia1);
-					linia1=brpares.readLine();
-					if(linia2!=null){
+				bw.write(linia1+sl);
+				System.out.println(linia1);
+				linia1=brpares.readLine();
+				if(linia2!=null){
 					bw.write(linia2+sl);
 					System.out.println(linia2);
 					linia2=brprimos.readLine();
-					}
+				}
 			}
 
 			bw.close();
