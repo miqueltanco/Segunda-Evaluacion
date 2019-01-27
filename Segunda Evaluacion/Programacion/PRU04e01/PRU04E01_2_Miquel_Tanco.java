@@ -7,12 +7,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class PRU04E01_1_Miquel_Tanco {
+public class PRU04E01_2_Miquel_Tanco {
 
 	public final static String SEPARATOR = System.getProperty("line.separator");
-	public final static String FICHERO_SORT = ("C:\\Temp\\words_sort.dat");
 
 	public static void main (String[]args) {
 
@@ -21,24 +19,24 @@ public class PRU04E01_1_Miquel_Tanco {
 
 		try {
 
-			BufferedReader words = new BufferedReader(new FileReader(args[0]));
-			BufferedWriter words_sort = new BufferedWriter(new FileWriter(FICHERO_SORT));
+			BufferedReader javaWcomments = new BufferedReader(new FileReader(args[0]));
+			BufferedWriter javaNcomments = new BufferedWriter(new FileWriter(args[1]));
 
 			do {
-				linia = words.readLine();
+				linia = javaWcomments.readLine();
 				if (linia !=null)
-					listaPalabras.add(linia);
+					linia = linia.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
+				listaPalabras.add(linia);
 
 			} while (linia != null);
 
-			Collections.sort(listaPalabras);
 			for(String palabra: listaPalabras) {
 				System.out.println(palabra);
-				words_sort.write(palabra + SEPARATOR);
+				javaNcomments.write(palabra + SEPARATOR);
 			}
 
-			words.close();
-			words_sort.close();
+			javaWcomments.close();
+			javaNcomments.close();
 
 		}
 		catch(FileNotFoundException e) {

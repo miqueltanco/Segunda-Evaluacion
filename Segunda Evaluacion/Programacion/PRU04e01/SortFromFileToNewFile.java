@@ -9,9 +9,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class PRU04E01_1_Miquel_Tanco {
+public class SortFromFileToNewFile {
 
 	public final static String SEPARATOR = System.getProperty("line.separator");
+	public final static String FICHERO_WORDS = ("C:\\Temp\\words.dat");
 	public final static String FICHERO_SORT = ("C:\\Temp\\words_sort.dat");
 
 	public static void main (String[]args) {
@@ -21,7 +22,7 @@ public class PRU04E01_1_Miquel_Tanco {
 
 		try {
 
-			BufferedReader words = new BufferedReader(new FileReader(args[0]));
+			BufferedReader words = new BufferedReader(new FileReader(FICHERO_WORDS));
 			BufferedWriter words_sort = new BufferedWriter(new FileWriter(FICHERO_SORT));
 
 			do {
@@ -36,6 +37,7 @@ public class PRU04E01_1_Miquel_Tanco {
 				System.out.println(palabra);
 				words_sort.write(palabra + SEPARATOR);
 			}
+
 
 			words.close();
 			words_sort.close();

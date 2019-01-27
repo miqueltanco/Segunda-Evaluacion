@@ -1,28 +1,27 @@
 package PRU04e01;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Scanner;
 
-public class PRU04E01_1_Miquel_Tanco {
+public class PRU04E01_3_Miquel_Tanco {
 
 	public final static String SEPARATOR = System.getProperty("line.separator");
-	public final static String FICHERO_SORT = ("C:\\Temp\\words_sort.dat");
 
 	public static void main (String[]args) {
 
+		Scanner sc = new Scanner(System.in);
 		ArrayList<String> listaPalabras = new ArrayList<String>();	
 		String linia = "";
+		int contador=0;
+		String input=sc.nextLine();
 
 		try {
 
 			BufferedReader words = new BufferedReader(new FileReader(args[0]));
-			BufferedWriter words_sort = new BufferedWriter(new FileWriter(FICHERO_SORT));
 
 			do {
 				linia = words.readLine();
@@ -31,14 +30,15 @@ public class PRU04E01_1_Miquel_Tanco {
 
 			} while (linia != null);
 
-			Collections.sort(listaPalabras);
 			for(String palabra: listaPalabras) {
-				System.out.println(palabra);
-				words_sort.write(palabra + SEPARATOR);
+				if(palabra.equals(input))
+					contador++;
 			}
 
 			words.close();
-			words_sort.close();
+			sc.close();
+
+			System.out.println("La palabra " + input + " aparece " + contador + " veces.");
 
 		}
 		catch(FileNotFoundException e) {

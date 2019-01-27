@@ -22,10 +22,9 @@ public class PRU03E05Pizza_Miquel_Tanco {
 	
 	Estado EstadoP;	
 	
-	public void sirve() throws Exception {
+	public void sirve() {
 		if (EstadoP.equals(EstadoP.demanada)) {
 			EstadoP = EstadoP.servida;
-			contadorDemanades--;
 			contadorPedides++;
 			System.out.println("aquesta pizza ja sh'a servit");
 		}
