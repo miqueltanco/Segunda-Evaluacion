@@ -1,4 +1,4 @@
-package escripturaylectura;
+package probandoClases;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,9 +15,7 @@ public class LecturaParesDataInputStream {
 			InputStream is = new  FileInputStream(FICHERO_PARES);
 			int linia = is.read();
 			do {
-				if(linia == 13||linia == 10)
-					linia = is.read();
-				System.out.println(linia);
+				System.out.print((char)linia);
 				linia = is.read();
 			} while(linia != -1);
 			
