@@ -32,7 +32,7 @@ public static void main (String[]args) {
 		listaArticulo = new ArrayList<Article>();
 		
 		Article ArticuloPrueba = new Article();
-		Article nouArticle=new Article();
+		Article nouArticle = new Article();
 		nouArticle.setCodi("CODI2");
 		
 		
