@@ -2,7 +2,7 @@ package pru03e06;
 
 public class Zona {
 
-	int entradesPerVendre;
+	private int entradesPerVendre;
 	
 	public Zona(int n) {
 		entradesPerVendre = n;

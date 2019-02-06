@@ -61,15 +61,15 @@ public class Pruebas {
 							
 						switch (subDecision) {
 							case 1:
-								System.out.println("De la zona Platea quedan " + ZonaPlatea.entradesPerVendre + " entradas.");
+								System.out.println("De la zona Platea quedan " + ZonaPlatea.getEntradesPerVendre() + " entradas.");
 								decision=0;
 								break;
 							case 2:
-								System.out.println("De la zona Anfiteatro quedan " + ZonaAnfi.entradesPerVendre + " entradas.");
+								System.out.println("De la zona Anfiteatro quedan " + ZonaAnfi.getEntradesPerVendre() + " entradas.");
 								decision=0;
 								break;
 							case 3:
-								System.out.println("De la zona VIP quedan " + ZonaVIP.entradesPerVendre + " entradas.");
+								System.out.println("De la zona VIP quedan " + ZonaVIP.getEntradesPerVendre() + " entradas.");
 								decision=0;
 								break;
 							default:
