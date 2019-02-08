@@ -28,8 +28,7 @@ public static void main (String[]args) {
 	
 	Scanner sc = new Scanner(System.in);
 	
-		ArrayList<Article> listaArticulo;
-		listaArticulo = new ArrayList<Article>();
+		ArrayList<Article> listaArticulo = new ArrayList<Article>();
 		
 		Article ArticuloPrueba = new Article();
 		Article nouArticle = new Article();
