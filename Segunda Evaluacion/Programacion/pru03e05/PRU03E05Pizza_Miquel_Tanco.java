@@ -26,7 +26,7 @@ public class PRU03E05Pizza_Miquel_Tanco {
 		if (EstadoP.equals(EstadoP.demanada)) {
 			EstadoP = EstadoP.servida;
 			contadorPedides++;
-			System.out.println("aquesta pizza ja sh'a servit");
+			System.out.println("aquesta pizza ja s'ha servit");
 		}
 		else System.out.println("Aquesta pizza ja s'ha servit");
 	}
